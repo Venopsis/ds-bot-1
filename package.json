@@ -2,13 +2,8 @@
   "name": "OtterSupremLeader",
   "version": "1.0.0",
   "description": "Otter them all!",
-<<<<<<< HEAD
   "main": "bot.js",
   "start": "node bot.js",
-=======
-  "main": "index.js",
-  "start": "node app.js",
->>>>>>> master
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
