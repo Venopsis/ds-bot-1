@@ -1,0 +1,15 @@
+{
+  "name": "OtterSupremLeader",
+  "version": "1.0.0",
+  "description": "Otter them all!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Venopsis",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
