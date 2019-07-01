@@ -12,7 +12,7 @@ BOT.on("ready", () => {
 
 BOT.on('message', msg => {
     if (msg.content === '!dev') {
-      msg.reply(user.tag);
+      msg.reply(msg.author.tag);
     }
   });
 
