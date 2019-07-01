@@ -2,18 +2,18 @@
 //https://medium.com/davao-js/2019-tutorial-creating-your-first-simple-discord-bot-47fc836a170b
 
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const BOT = new Discord.BOT();
 const auth = require('./auth.json');
 
-client.on("ready", () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setStatus("online");
+BOT.on("ready", () => {
+    console.log(`Logged in as ${BOT.user.tag}!`);
+    BOT.user.setStatus("dnd");
 });
 
-client.on('message', msg => {
-    if (msg.content === 'ping') {
-      msg.reply('pong');
+BOT.on('message', msg => {
+    if (msg.content === '!dev') {
+      msg.reply(clientInformation);
     }
   });
 
-client.login(auth.token);
+BOT.login(auth.token);
