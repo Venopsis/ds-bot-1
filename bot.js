@@ -2,7 +2,7 @@
 //https://medium.com/davao-js/2019-tutorial-creating-your-first-simple-discord-bot-47fc836a170b
 
 const Discord = require('discord.js');
-const BOT = new Discord.BOT();
+const BOT = new Discord.Client();
 const auth = require('./auth.json');
 
 BOT.on("ready", () => {
@@ -12,7 +12,7 @@ BOT.on("ready", () => {
 
 BOT.on('message', msg => {
     if (msg.content === '!dev') {
-      msg.reply(clientInformation);
+      msg.reply(user.tag);
     }
   });
 
