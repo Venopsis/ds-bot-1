@@ -4,15 +4,18 @@
 const Discord = require('discord.js');
 const BOT = new Discord.Client();
 const auth = require('./auth.json');
+const GUILD = new Discord.Guild();
 
 BOT.on("ready", () => {
     console.log(`Logged in as ${BOT.user.tag}!`);
-    BOT.user.setStatus("dnd");
 });
 
 BOT.on('message', msg => {
-    if (msg.content === '!dev') {
-      msg.reply(msg.author.tag);
+    if (msg.content === '!prune') {
+      GUILD.pruneMembers(15,true)
+      .then(pruned => console.log(`I just pruned ${pruned} people!`))
+      .then(pruned => console.log(`Following people will be pruned : ${pruned.user}`))
+      .catch(console.error);
     }
   });
 
