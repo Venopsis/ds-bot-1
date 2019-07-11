@@ -13,7 +13,7 @@ BOT.on("ready", () => {
 BOT.on('message', msg => {
     if (msg.content === '!prune') {
       GUILD.pruneMembers(15,true)
-      .then(pruned => console.log(`I just pruned ${pruned} people!`))
+      .then(pruned => {console.log(`I just pruned ${pruned} people!`)})
       //.then(pruned => console.log(`Following people will be pruned : ${pruned.user}`))
       .catch(console.error);
     }
